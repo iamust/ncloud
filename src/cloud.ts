@@ -6,7 +6,7 @@ export class Cloud {
 
   constructor({ appId, appKey, masterKey, prefix, debug }) {
     this.client = new Client({ appId, appKey, masterKey })
-    this.prefix = prefix || 'mcd_'
+    this.prefix = prefix || 'lux_'
 
     if (this.debugOn() || debug) {
       this.client.debug()
