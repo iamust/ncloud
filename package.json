@@ -1,5 +1,5 @@
 {
-  "name": "@minisode/mdcloud",
+  "name": "@statstic/mdcloud",
   "main": "mdcloud.js",
   "version": "1.0.5",
   "license": "MIT",
@@ -8,12 +8,12 @@
     "build": "tsc && babel dist -d lib"
   },
   "dependencies": {
-    "axios": "^0.24.0"
+    "axios": "^0.27.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.0",
-    "@types/node": "^16.11.7",
-    "typescript": "^4.4.4"
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@types/node": "^16.11.38",
+    "typescript": "^4.7.3"
   }
 }
