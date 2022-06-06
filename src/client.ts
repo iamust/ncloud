@@ -92,7 +92,7 @@ export class Client {
   }
 
   debug() {
-    this.axios.interceptors.request.use(request => {
+    this.axios.interceptors.request.use((request) => {
       const { method, url, params, data } = request
       console.log({ method, url, params, data })
       return request
