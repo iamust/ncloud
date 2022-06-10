@@ -1,4 +1,4 @@
-const { Cloud } = require('./lib/cloud')
+const { Cloud } = require('./dist/cloud')
 
 module.exports = function mdcloud({ appId, appKey, masterKey, prefix, debug } = {}) {
   return new Cloud({
