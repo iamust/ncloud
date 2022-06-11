@@ -1,1 +1,1 @@
-module.exports = require('../lib/helpers/types')
+module.exports = require('../dist/helpers/types')
