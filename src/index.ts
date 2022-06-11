@@ -1,6 +1,7 @@
-const { Cloud } = require('./dist/cloud')
+import type { CloudOptions } from './cloud'
+import { Cloud } from './cloud'
 
-module.exports = function mdcloud({ appId, appKey, masterKey, prefix, debug } = {}) {
+function mdcloud({ appId, appKey, masterKey, prefix, debug }: CloudOptions) {
   return new Cloud({
     appId: appId || process.env.LC_APP_ID,
     appKey: appKey || process.env.LC_APP_KEY,
@@ -9,3 +10,5 @@ module.exports = function mdcloud({ appId, appKey, masterKey, prefix, debug } = 
     debug
   })
 }
+
+module.exports = mdcloud

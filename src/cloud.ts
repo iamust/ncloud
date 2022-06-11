@@ -1,10 +1,18 @@
 import { Client } from './client'
 
+export interface CloudOptions {
+  appId: string
+  appKey: string
+  masterKey: string
+  prefix?: string
+  debug?: boolean
+}
+
 export class Cloud {
   readonly client: Client
   readonly prefix: string
 
-  constructor({ appId, appKey, masterKey, prefix, debug }) {
+  constructor({ appId, appKey, masterKey, prefix, debug }: CloudOptions) {
     this.client = new Client({ appId, appKey, masterKey })
     this.prefix = prefix || 'lux_'
 
