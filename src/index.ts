@@ -1,7 +1,13 @@
 import type { CloudOptions } from './cloud'
 import { Cloud } from './cloud'
 
-function mdcloud({ appId, appKey, masterKey, prefix, debug }: CloudOptions) {
+export function mdcloud({
+  appId,
+  appKey,
+  masterKey,
+  prefix,
+  debug
+}: CloudOptions) {
   return new Cloud({
     appId: appId || process.env.LC_APP_ID,
     appKey: appKey || process.env.LC_APP_KEY,
@@ -10,5 +16,3 @@ function mdcloud({ appId, appKey, masterKey, prefix, debug }: CloudOptions) {
     debug
   })
 }
-
-module.exports = mdcloud
