@@ -1,5 +1,5 @@
 {
-  "name": "@tossdev/mdcloud",
+  "name": "@tossdev/ncloud",
   "main": "dist/index.js",
   "version": "1.0.1",
   "license": "MIT",
