@@ -1,7 +1,7 @@
 import type { CloudOptions } from './cloud'
 import { Cloud } from './cloud'
 
-export function mdcloud({
+export function ncloud({
   appId,
   appKey,
   masterKey,
