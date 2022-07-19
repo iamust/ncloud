@@ -1,11 +1,5 @@
 export class Query {
-  private state: {
-    [key: string]: any
-  }
-
-  constructor() {
-    this.state = {}
-  }
+  private state: Record<string, any> = {}
 
   get values() {
     if (!this.state.where) {

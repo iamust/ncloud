@@ -18,10 +18,6 @@ function decrement(value: number = 1) {
   return { __op: 'Decrement', amount: value }
 }
 
-function deleteProperty() {
-  return { __op: 'Delete' }
-}
-
 function addRelation(className: string, objectId: string) {
   return {
     __op: 'AddRelation',
@@ -40,10 +36,14 @@ function removeRelation(className: string, objectId: string) {
   }
 }
 
+function deleteProperty() {
+  return { __op: 'Delete' }
+}
+
 export const op = {
   increment,
   decrement,
-  deleteProperty,
   addRelation,
-  removeRelation
+  removeRelation,
+  deleteProperty
 }

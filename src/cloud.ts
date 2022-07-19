@@ -16,7 +16,7 @@ export class Cloud {
     this.client = new Client({ appId, appKey, masterKey })
     this.prefix = prefix || 'lux_'
 
-    if (this.debugOn() || debug) {
+    if (this.debug || debug) {
       this.client.debug()
     }
   }
@@ -25,7 +25,7 @@ export class Cloud {
     return this.client.dataset(`${this.prefix}${identifier}`)
   }
 
-  private debugOn() {
+  private get debug() {
     return process.env.DEBUG === 'axios'
   }
 }
