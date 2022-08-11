@@ -1,9 +1,7 @@
+import type { ClientOpts } from './client'
 import { Client } from './client'
 
-export interface CloudOptions {
-  appId: string
-  appKey: string
-  masterKey: string
+export type CloudOpts = ClientOpts & {
   prefix?: string
   debug?: boolean
 }
@@ -12,7 +10,7 @@ export class Cloud {
   readonly client: Client
   readonly prefix: string
 
-  constructor({ appId, appKey, masterKey, prefix, debug }: CloudOptions) {
+  constructor({ appId, appKey, masterKey, prefix, debug }: CloudOpts) {
     this.client = new Client({ appId, appKey, masterKey })
     this.prefix = prefix || 'ln_'
 

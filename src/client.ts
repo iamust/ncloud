@@ -1,6 +1,12 @@
 import type { AxiosInstance } from 'axios'
-import { createAxios } from './helpers/axios'
+import { build } from './helpers/axios'
 import { Query } from './query'
+
+export type ClientOpts = {
+  appId: string
+  appKey: string
+  masterKey: string
+}
 
 export class Client {
   private readonly axios: AxiosInstance
@@ -8,8 +14,8 @@ export class Client {
   private className: string
   private objectId?: string
 
-  constructor({ appId, appKey, masterKey }: Record<string, string>) {
-    this.axios = createAxios({ appId, appKey, masterKey })
+  constructor({ appId, appKey, masterKey }: ClientOpts) {
+    this.axios = build(appId, appKey, masterKey)
     this.query = new Query()
   }
 
